@@ -14,8 +14,8 @@ OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', '')
 MODEL = os.getenv('OPENAI_MODEL', 'gpt-5-mini')
 ALLOWED_ORIGIN = os.getenv('ALLOWED_ORIGIN', 'http://localhost:8000').rstrip('/')
 MAX_REQUESTS_TOTAL = int(os.getenv('MAX_REQUESTS_TOTAL', '300'))
-MAX_REQUESTS_PER_MINUTE = int(os.getenv('MAX_REQUESTS_PER_MINUTE', '12'))
-MAX_OUTPUT_TOKENS = min(int(os.getenv('MAX_OUTPUT_TOKENS', '900')), 1500)
+MAX_REQUESTS_PER_MINUTE = int(os.getenv('MAX_REQUESTS_PER_MINUTE', '30'))
+MAX_OUTPUT_TOKENS = min(int(os.getenv('MAX_OUTPUT_TOKENS', '900')), 5000)
 WORKSHOP_ENABLED = os.getenv('WORKSHOP_ENABLED', 'true').lower() == 'true'
 
 app = FastAPI(title='AI4UNI Workshop Proxy', docs_url=None, redoc_url=None)
